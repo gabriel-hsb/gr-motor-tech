@@ -1,0 +1,44 @@
+@import url(./modules/header/header.css);
+
+/* --- START VARIABLES --- */
+
+:root {
+  /* --ff-monospace: "IBM Plex Mono", monospace;
+  --ff-title: "Playfair Display SC", Georgia;
+  --ff-paragraph: Helvetica, Arial, sans-serif; */
+
+  --bg-main: #161220;
+}
+
+/* --- END VARIABLES --- */
+
+/* --- START RESETS --- */
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: inherit;
+  scroll-behavior: smooth;
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+/* --- END RESETS --- */
+
+body {
+  background: var(--bg-main);
+}
