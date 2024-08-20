@@ -1,13 +1,18 @@
 @import url(./modules/header/header.css);
+@import url(./modules/hero-section/hero-section.css);
 
 /* --- START VARIABLES --- */
 
 :root {
-  /* --ff-monospace: "IBM Plex Mono", monospace;
-  --ff-title: "Playfair Display SC", Georgia;
-  --ff-paragraph: Helvetica, Arial, sans-serif; */
+  --ff-display-text: "Poppins", sans-serif;
+  --ff-utils-text: "Roboto", sans-serif;
+  --ff-paragraph-text: "Lato", sans-serif;
 
   --bg-main: #161220;
+  --accent-color: #3d5dd4;
+  --text-bg-accent: #f7f7f7;
+
+  --text-bg-main: #a5c5e9;
 }
 
 /* --- END VARIABLES --- */
@@ -41,4 +46,72 @@ ul {
 
 body {
   background: var(--bg-main);
+  color: var(--text-bg-main);
+  -webkit-font-smoothing: antialiased;
 }
+
+/* --- START UTILS --- */
+.main-container {
+  max-width: 1300px;
+  padding-inline: 1.25rem;
+  margin: 0 auto;
+}
+
+.display-text {
+  font-family: var(--ff-display-text);
+  color: #f7f7f7;
+  font-weight: 700;
+  line-height: 72px;
+
+  font-size: 64px;
+  max-width: 15ch;
+}
+
+button.main-full-btn {
+  background-color: var(--accent-color);
+
+  color: var(--text-bg-accent);
+  font-family: var(--ff-utils-text);
+  font-size: 1rem;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  border: none;
+  cursor: pointer;
+
+  border-radius: 0.625rem;
+  padding-block: 0.875rem;
+  padding-inline: 1.25rem;
+
+  &:hover {
+    filter: brightness(90%);
+    transition: 0.2s;
+  }
+}
+
+button.main-outline-btn {
+  border: 3px solid var(--accent-color);
+  background-color: transparent;
+
+  color: var(--text-bg-accent);
+  font-family: var(--ff-utils-text);
+  font-size: 1rem;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  cursor: pointer;
+
+  border-radius: 0.625rem;
+  padding-block: 0.875rem;
+  padding-inline: 1.25rem;
+
+  &:hover {
+    background-color: var(--accent-color);
+    transition: 0.2s;
+  }
+}
+/* --- END UTILS --- */

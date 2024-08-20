@@ -1,0 +1,38 @@
+section.hero {
+  width: 100%;
+  height: calc(100vh - 100px);
+  background-image: url(../../assets/hero-img.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  div.main-container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+    div.hero-container {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+
+      div.hero-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        p {
+          font-family: var(--ff-paragraph-text);
+          font-size: 18px;
+          max-width: 34ch;
+        }
+      }
+
+      div.hero-btns {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+header {
+  img {
+    width: 150px;
+  }
+  font-family: var(--ff-utils-text);
+
+  padding-block: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  ul,
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    a {
+      padding: 10px;
+      &:hover {
+        color: #f7f7f7;
+        transition: 0.2s;
+      }
+    }
+  }
+}
