@@ -1,0 +1,121 @@
+.contact {
+  padding-block: 2.25rem;
+  div.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.75rem;
+
+    .title {
+      text-align: center;
+    }
+
+    .map {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding-top: 40%;
+
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: var(--radius);
+      }
+    }
+
+    .contacts {
+      font-family: var(--ff-paragraph-text);
+      color: #ccc;
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-around;
+
+      #fancy-bar {
+        width: 4px;
+        height: 150px;
+        border-radius: 4px;
+        background: linear-gradient(180deg, #3d3893 0%, #434e6c 100%);
+        transition: 0.3s;
+      }
+
+      .contact-list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        h3 {
+          font-size: 2rem;
+          line-height: normal !important;
+        }
+
+        li {
+          padding-block: 8px;
+        }
+
+        #address li {
+          padding-block: 3px;
+        }
+
+        li a:hover {
+          color: #fff;
+          transition: 0.3s;
+        }
+
+        *::before {
+          position: absolute;
+          display: inline-block;
+
+          background-repeat: no-repeat;
+          content: "";
+        }
+
+        a#tel {
+          position: relative;
+          &::before {
+            width: 25px;
+            height: 1.5625rem;
+            background-image: url(../../assets/tel-icon.svg);
+            right: 130px;
+          }
+        }
+
+        a#insta {
+          position: relative;
+          &::before {
+            width: 25px;
+            height: 1.5625rem;
+            background-image: url(../../assets/insta.svg);
+            right: 110px;
+          }
+        }
+
+        a#facebook {
+          position: relative;
+          &::before {
+            width: 25px;
+            height: 1.5625rem;
+            background-image: url(../../assets/face.svg);
+            right: 146px;
+          }
+        }
+
+        li#address {
+          position: relative;
+          &::before {
+            width: 25px;
+            height: 1.5625rem;
+            background-image: url(../../assets/address.svg);
+            right: 150px;
+          }
+        }
+      }
+    }
+  }
+}

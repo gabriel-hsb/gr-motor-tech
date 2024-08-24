@@ -12,10 +12,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins&family=Roboto&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins&family=Roboto&family=IBM+Plex+Mono&display=swap"
       rel="stylesheet"
     />
     <!-- END GOOGLE FONTS -->
+
+    <!-- START FAVICON -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <!-- END FAVICON -->
 
     <link rel="stylesheet" href="./main.css" />
   </head>
@@ -24,19 +45,22 @@
       <img src="./assets/logo-svg.svg" alt="Logo Motor Tech" />
       <ul>
         <nav>
-          <li><a href="#">Sobre nós</a></li>
-          <li><a href="#">Serviços</a></li>
-          <li><a href="#">Clientes</a></li>
-          <li><a href="#">Contato</a></li>
+          <li><a href="#sobre-nos">Sobre nós</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#clientes">Clientes</a></li>
+          <li><a href="#contato">Contato</a></li>
         </nav>
-        <button class="main-full-btn">Orçamento</button>
+        <a
+          href="https://wa.me/5515991353491?text=Olá!%20Vim%20pelo%20seu%20site"
+        >
+          <button class="main-full-btn">Orçamento</button>
+        </a>
       </ul>
     </header>
 
     <section class="hero">
       <div class="main-container">
         <div class="hero-container">
-
           <div class="hero-text">
             <h1 class="display-text">MANTENHA SEU CARRO EM PERFEITO ESTADO</h1>
             <p>
@@ -61,5 +85,172 @@
         </div>
       </div>
     </section>
+
+    <section id="sobre-nos" class="about-us">
+      <div class="main-container">
+        <div class="title">
+          <h2 class="title-text">Sobre nós</h2>
+          <p class="subtitle-text">
+            Somos uma equipe de Boituva formada por pessoas amantes de carros,
+            dedicadas a transformar essa paixão em serviços de alta qualidade
+            para nossos clientes.
+          </p>
+        </div>
+        <img
+          src="./assets/about-us-section.jpg"
+          alt="Foto de um homem consertando um carro e sorrindo para a câmera"
+        />
+        <p class="subtitle-text last-text">
+          Desde manutenções rotineiras até reparos complexos, tratamos cada
+          carro como se fosse nosso. Acreditamos que a segurança e a performance
+          de um veículo são fundamentais, e é por isso que nos esforçamos para
+          oferecer soluções rápidas, eficazes e confiáveis.
+        </p>
+      </div>
+    </section>
+
+    <section id="servicos" class="services">
+      <div class="main-container">
+        <div class="title">
+          <h2 class="title-text">Serviços</h2>
+          <p class="subtitle-text">
+            Desde reboques até troca de escapamento, estamos sempre dispostos a
+            ajudar nossos clientes. Confira nossas especialidades.
+          </p>
+        </div>
+        <div class="cards-container">
+          <div class="cards-row" id="row-1">
+            <div class="card">
+              <img
+                src="./assets/vela.png"
+                alt="Foto de um par de velas de carro"
+              />
+              <div>
+                <span>Velas</span>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                src="./assets/vela.png"
+                alt="Foto de um par de velas de carro"
+              />
+              <div>
+                <span>Velas</span>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                src="./assets/vela.png"
+                alt="Foto de um par de velas de carro"
+              />
+              <div>
+                <span>Velas</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cards-row" id="row-2">
+            <div class="card">
+              <img
+                src="./assets/vela.png"
+                alt="Foto de um par de velas de carro"
+              />
+              <div>
+                <span>Velas</span>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                src="./assets/vela.png"
+                alt="Foto de um par de velas de carro"
+              />
+              <div>
+                <span>Velas</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a
+          href="https://wa.me/5515991353491?text=Olá!%20Vim%20pelo%20seu%20site"
+        >
+          <button class="main-full-btn">
+            Orçamento
+            <img src="./assets/wpp-icon.svg" alt="Ícone do WhatsApp" />
+          </button>
+        </a>
+      </div>
+    </section>
+
+    <section class="contact" id="contato">
+      <div class="main-container">
+        <div class="title">
+          <h2 class="title-text">Contato</h2>
+          <p class="subtitle-text">
+            Confira abaixo nossa localização e formas de falar com a gente.
+          </p>
+        </div>
+
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4358.037544429813!2d-47.693436972536446!3d-23.291868027073715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c5e19d3aaff4d1%3A0x97ebed02c748d90d!2sSakura%20Nakaya%20Alimentos!5e0!3m2!1spt-BR!2sbr!4v1724535315670!5m2!1spt-BR!2sbr"
+            style="border: 0"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+
+        <div class="contacts">
+          <div class="contact-list">
+            <h3 class="title-text">Telefone</h3>
+            <ul>
+              <li>
+                <a id="tel" href="tel:+5515981230110">(15) 9 8123-0110</a>
+              </li>
+              <li><a href="tel:+5515991353491">(15) 9 9135-3491</a></li>
+            </ul>
+          </div>
+
+          <div id="fancy-bar"></div>
+
+          <div class="contact-list">
+            <h3 class="title-text">Redes</h3>
+            <ul>
+              <li>
+                <a id="insta" href="https://instagram.com/grmotortech"
+                  >@grmotortech</a
+                >
+              </li>
+              <li>
+                <a id="facebook" href="https://facebook.com/grmotortech"
+                  >Motor Tech Boituva</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div id="fancy-bar"></div>
+
+          <div class="contact-list">
+            <h3 class="title-text">Endereço</h3>
+            <ul>
+              <li id="address">Rua Lorem Ipsum, 35</li>
+              <li>Bairro Lorem Ipsum</li>
+              <li>Boituva - SP</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      Site desenvolvido por
+      <span>
+        <a
+          href="https://wa.me/5515981771985?text=Olá Gabriel!%20Vim%20pelo%20seu%20site%20GR%20Motor%20Tech"
+          >gabriel-hsb</a
+        >
+      </span>
+    </footer>
   </body>
 </html>

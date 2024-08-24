@@ -1,5 +1,9 @@
 @import url(./modules/header/header.css);
 @import url(./modules/hero-section/hero-section.css);
+@import url(./modules/about-us/about-us.css);
+@import url(./modules/services/services.css);
+@import url(./modules/contact/contact.css);
+@import url(./modules/footer/footer.css);
 
 /* --- START VARIABLES --- */
 
@@ -9,10 +13,13 @@
   --ff-paragraph-text: "Lato", sans-serif;
 
   --bg-main: #161220;
+  --bg-secondary: #150d14;
   --accent-color: #3d5dd4;
   --text-bg-accent: #f7f7f7;
 
   --text-bg-main: #a5c5e9;
+
+  --radius: 0.625rem;
 }
 
 /* --- END VARIABLES --- */
@@ -24,12 +31,13 @@
   padding: 0;
   text-decoration: none;
   color: inherit;
-  scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 body,
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 img {
@@ -57,6 +65,7 @@ body {
   margin: 0 auto;
 }
 
+/* H1 */
 .display-text {
   font-family: var(--ff-display-text);
   color: #f7f7f7;
@@ -65,6 +74,24 @@ body {
 
   font-size: 64px;
   max-width: 15ch;
+}
+
+/* H2 */
+.title-text {
+  font-family: var(--ff-display-text);
+  color: #f7f7f7;
+  font-weight: 700;
+  line-height: 72px;
+
+  font-size: 3.375rem;
+}
+
+.subtitle-text {
+  font-family: var(--ff-paragraph-text);
+  color: #ccc;
+
+  font-size: 1.25rem;
+  max-width: 55ch;
 }
 
 button.main-full-btn {
@@ -81,7 +108,7 @@ button.main-full-btn {
   border: none;
   cursor: pointer;
 
-  border-radius: 0.625rem;
+  border-radius: var(--radius);
   padding-block: 0.875rem;
   padding-inline: 1.25rem;
 
@@ -105,9 +132,11 @@ button.main-outline-btn {
 
   cursor: pointer;
 
-  border-radius: 0.625rem;
+  border-radius: var(--radius);
   padding-block: 0.875rem;
   padding-inline: 1.25rem;
+
+  transition: 0.2s;
 
   &:hover {
     background-color: var(--accent-color);
