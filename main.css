@@ -36,7 +36,6 @@
 
 body,
 html {
-  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -112,7 +111,9 @@ button.main-full-btn {
   padding-block: 0.875rem;
   padding-inline: 1.25rem;
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:focus-visible {
     filter: brightness(90%);
     transition: 0.2s;
   }
@@ -138,9 +139,25 @@ button.main-outline-btn {
 
   transition: 0.2s;
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:focus-visible {
     background-color: var(--accent-color);
     transition: 0.2s;
   }
 }
 /* --- END UTILS --- */
+
+/* --- START ANIMATIONS --- */
+@keyframes topToBottom {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -10px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* --- END ANIMATIONS --- */

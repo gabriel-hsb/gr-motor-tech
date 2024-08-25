@@ -43,19 +43,24 @@
   <body>
     <header class="main-container">
       <img src="./assets/logo-svg.svg" alt="Logo Motor Tech" />
-      <ul>
-        <nav>
-          <li><a href="#sobre-nos">Sobre nós</a></li>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#clientes">Clientes</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </nav>
-        <a
-          href="https://wa.me/5515991353491?text=Olá!%20Vim%20pelo%20seu%20site"
-        >
-          <button class="main-full-btn">Orçamento</button>
-        </a>
-      </ul>
+      <button data-menu="button" aria-expanded="false" aria-controls="menu">
+        MENU
+      </button>
+      <section class="modal-container">
+        <ul data-menu="list" id="menu">
+          <nav>
+            <li><a href="#sobre-nos">Sobre nós</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#clientes">Clientes</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </nav>
+          <a
+            href="https://wa.me/5515991353491?text=Olá!%20Vim%20pelo%20seu%20site"
+          >
+            <button class="main-full-btn">Orçamento</button>
+          </a>
+        </ul>
+      </section>
     </header>
 
     <section class="hero">
@@ -252,5 +257,7 @@
         >
       </span>
     </footer>
+
+    <script type="module" src="./main.js"></script>
   </body>
 </html>

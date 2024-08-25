@@ -1,6 +1,7 @@
 header {
   img {
     width: 150px;
+    z-index: inherit;
   }
   font-family: var(--ff-utils-text);
 
@@ -16,7 +17,6 @@ header {
     gap: 1rem;
 
     a {
-      padding: 10px;
       &:hover {
         color: #f7f7f7;
         transition: 0.2s;
@@ -24,3 +24,107 @@ header {
     }
   }
 }
+
+/* BURGUER MENU */
+
+.overflowY {
+  overflow-y: hidden;
+}
+
+[data-menu="button"] {
+  display: none;
+}
+
+.modal-container.active {
+  display: none;
+  animation: topToBottom 0.4s forwards;
+}
+
+@media (width <= 768px) {
+  header {
+    z-index: 100;
+
+    section {
+      display: none; /* idk why, but it works*/
+    }
+
+    .modal-container.active {
+      height: 100vh;
+      width: 100%;
+
+      background: rgba(4, 3, 3, 0.28);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(22.1px);
+      -webkit-backdrop-filter: blur(9.1px);
+
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 90;
+      display: initial;
+      justify-content: center;
+      align-items: center;
+      transition: 1s;
+    }
+
+    ul,
+    nav {
+      align-items: flex-start;
+      flex-direction: column;
+      padding-top: 3.75rem;
+      gap: 2rem;
+
+      font-size: 1.75rem;
+    }
+
+    ul {
+      max-width: 1300px;
+      padding-inline: 1.25rem;
+      margin: 0 auto;
+    }
+
+    a {
+      font-size: 2rem;
+    }
+  }
+
+  /* BURGUER MENU BUTTON */
+
+  [data-menu="button"] {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    background-color: var(--accent-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    font-family: var(--ff-utils-text);
+
+    cursor: pointer;
+    margin: 10px;
+    position: relative;
+    z-index: 500;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      height: 2px;
+      width: 12px;
+
+      background-color: #fff;
+      box-shadow: 0 4px #fff, 0 -4px #fff;
+      transition: rotate 0.3s;
+    }
+
+    &.active::before {
+      rotate: 90deg;
+    }
+  }
+}
+
+/* //TODO: change wpp buton style when modal active  */
