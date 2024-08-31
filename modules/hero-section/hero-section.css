@@ -17,8 +17,7 @@ section.hero {
 
     @media (width <= 600px) {
       justify-content: center;
-      align-items: flex-start;
-      padding-top: 4rem;
+      align-items: center;
     }
 
     div.hero-container {
