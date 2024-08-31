@@ -6,6 +6,10 @@ section.hero {
   background-size: cover;
   background-position: center;
 
+  @media (width <= 600px) {
+    height: 80vh;
+  }
+
   div.main-container {
     display: flex;
     height: 100%;
