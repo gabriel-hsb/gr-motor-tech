@@ -16,6 +16,10 @@
       width: 100%;
       padding-top: 40%;
 
+      @media (width <= 768px) {
+        padding-top: 60%;
+      }
+
       iframe {
         position: absolute;
         top: 0;
@@ -36,23 +40,43 @@
       align-items: flex-start;
       justify-content: space-around;
 
+      @media (width <= 768px) {
+        flex-direction: column;
+        padding-left: 2rem;
+        gap: 1.5rem;
+      }
+
       #fancy-bar {
         width: 4px;
         height: 150px;
         border-radius: 4px;
         background: linear-gradient(180deg, #3d3893 0%, #434e6c 100%);
         transition: 0.3s;
+
+        @media (width <= 768px) {
+          width: 150px;
+          height: 4px;
+        }
       }
 
       .contact-list {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         justify-content: center;
+
+        @media (width <= 768px) {
+          align-items: flex-start;
+        }
 
         h3 {
           font-size: 2rem;
           line-height: normal !important;
+
+          @media (width <= 768px) {
+            font-size: 1.875rem;
+            text-align: start;
+          }
         }
 
         li {

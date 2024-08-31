@@ -2,12 +2,20 @@
   padding: 2.25rem;
   background-color: var(--bg-secondary);
 
+  @media (width <= 768px) {
+    padding: 0;
+  }
+
   div.main-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 3.75rem;
+
+    @media (width <= 768px) {
+      gap: 3rem;
+    }
 
     div.title {
       display: flex;
@@ -21,6 +29,7 @@
       display: flex;
       flex-direction: column;
       gap: 3.5rem;
+      flex-wrap: wrap;
 
       #row-1 {
         justify-content: space-around !important;
@@ -34,6 +43,7 @@
         display: flex;
         align-items: center;
         gap: 3.5rem;
+        flex-wrap: wrap;
       }
 
       .card {
@@ -41,16 +51,24 @@
         border-radius: var(--radius);
         color: #222;
         font-family: var(--ff-utils-text);
-        background-color: #fff;
+        object-fit: cover;
+
+        max-width: 33%;
+        min-width: 200px;
+
+        flex: 1;
+
+        @media (width <= 768px) {
+          max-width: 50% !important;
+        }
 
         div {
           text-align: left;
           padding: 1.125rem;
-          background: rgb(255, 255, 255);
           background: linear-gradient(
             90deg,
-            rgba(255, 255, 255, 1) 0%,
-            rgba(0, 0, 0 / 30) 100%
+            rgba(255, 255, 255) 0%,
+            rgba(0, 0, 0, 0.5) 200%
           );
         }
       }

@@ -4,16 +4,22 @@ export default function headerMenu() {
   const links = modalContainer.querySelectorAll("a")
 
   if (button && modalContainer && links) {
+    button.addEventListener("click", toggleActive)
+
     function toggleActive() {
       modalContainer.classList.toggle("active")
       button.classList.toggle("active")
       document.body.classList.toggle("overflowY")
+
+      linksEventListener()
     }
 
-    button.addEventListener("click", toggleActive)
-
-    links.forEach((link) => {
-      link.addEventListener("click", toggleActive)
-    })
+    function linksEventListener() {
+      if (modalContainer.classList.contains("active")) {
+        links.forEach((link) => {
+          link.addEventListener("click", toggleActive)
+        })
+      }
+    }
   }
 }

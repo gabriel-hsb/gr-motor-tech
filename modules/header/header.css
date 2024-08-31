@@ -2,6 +2,10 @@ header {
   img {
     width: 150px;
     z-index: inherit;
+
+    @media (width <= 768px) {
+      width: 120px;
+    }
   }
   font-family: var(--ff-utils-text);
 
@@ -45,7 +49,7 @@ header {
     z-index: 100;
 
     section {
-      display: none; /* idk why, but it works*/
+      display: none; 
     }
 
     .modal-container.active {
@@ -54,7 +58,7 @@ header {
 
       background: rgba(4, 3, 3, 0.28);
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-      backdrop-filter: blur(22.1px);
+      backdrop-filter: blur(28.1px);
       -webkit-backdrop-filter: blur(9.1px);
 
       position: fixed;
@@ -85,6 +89,16 @@ header {
 
     a {
       font-size: 2rem;
+      font-weight: 600;
+    }
+
+    #wpp-header {
+      background: transparent;
+      font-size: 2rem;
+      color: #ccc;
+      padding: 0;
+      font-weight: bold;
+      text-decoration: underline;
     }
   }
 

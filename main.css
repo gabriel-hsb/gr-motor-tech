@@ -73,6 +73,16 @@ body {
 
   font-size: 64px;
   max-width: 15ch;
+
+  @media (width <= 768px) {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+
+  @media (width <= 600px) {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
 }
 
 /* H2 */
@@ -83,6 +93,10 @@ body {
   line-height: 72px;
 
   font-size: 3.375rem;
+
+  @media (width <= 768px) {
+    font-size: 2.375rem;
+  }
 }
 
 .subtitle-text {
@@ -91,6 +105,10 @@ body {
 
   font-size: 1.25rem;
   max-width: 55ch;
+
+  @media (width <= 768px) {
+    font-size: 1.125rem;
+  }
 }
 
 button.main-full-btn {
@@ -116,6 +134,13 @@ button.main-full-btn {
   &:focus-visible {
     filter: brightness(90%);
     transition: 0.2s;
+  }
+
+  @media (width <= 768px) {
+    font-size: 1rem;
+
+    padding-block: 0.625rem;
+    padding-inline: 0.875rem;
   }
 }
 
@@ -144,6 +169,15 @@ button.main-outline-btn {
   &:focus-visible {
     background-color: var(--accent-color);
     transition: 0.2s;
+  }
+
+  @media (width <= 768px) {
+    & {
+      font-size: 1rem;
+
+      padding-block: 0.625rem;
+      padding-inline: 0.875rem;
+    }
   }
 }
 /* --- END UTILS --- */

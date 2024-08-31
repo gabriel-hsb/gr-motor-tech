@@ -11,6 +11,12 @@ section.hero {
     height: 100%;
     align-items: center;
 
+    @media (width <= 600px) {
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 6rem;
+    }
+
     div.hero-container {
       display: flex;
       flex-direction: column;
@@ -26,12 +32,21 @@ section.hero {
           font-size: 18px;
           max-width: 34ch;
         }
+
+        @media (width <= 600px) {
+          text-align: center;
+          align-items: center;
+        }
       }
 
       div.hero-btns {
         display: flex;
         align-items: center;
         gap: 1.5rem;
+        @media (width <= 600px) {
+          align-items: center;
+          justify-content: center;
+        }
       }
     }
   }
