@@ -7,7 +7,7 @@ section.hero {
   background-position: center;
 
   @media (width <= 600px) {
-    height: 80vh;
+    height: 70vh;
   }
 
   div.main-container {
@@ -18,7 +18,7 @@ section.hero {
     @media (width <= 600px) {
       justify-content: center;
       align-items: flex-start;
-      padding-top: 6rem;
+      padding-top: 4rem;
     }
 
     div.hero-container {
