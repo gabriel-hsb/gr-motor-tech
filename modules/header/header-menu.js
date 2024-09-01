@@ -11,6 +11,8 @@ export default function headerMenu() {
       button.classList.toggle("active")
       document.body.classList.toggle("overflowY")
 
+      button.setAttribute("aria-expanded", "true")
+
       linksEventListener()
     }
 
